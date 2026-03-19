@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Pinos ESP32</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div>
+        <img id="logo" src="images/senai.png" alt="">
+    </div>
+    <h1 id="textobase">Pinos</h1>
+    <nav>
+        <a href="inicio.html">Início</a>
+        <a href="pinos.html">Pinos</a>
+        <a href="esp32.html">ESP32</a>
+        <a href="festo.html">Componentes</a>
+        <a href="integrantes.html">Integrantes</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Entradas e Saidas</h2>
+    <p>Cada pino tem sua funcionalidade para fazer o programa rodar</p>
+</section>
+
+<main class="container">
+
+<div class="card">
+<h2>Configuração dos Pinos</h2>
+
+<ul class="lista">
+<li>D23 — Fim de curso (volta)</li>
+<li>D22 — Fim de curso (vai)</li>
+<li>D21 — Sobe / desce</li>
+<li>D19 — Pinça</li>
+<li>VP — Sensor esteira</li>
+<li>D26 — Sensor garra</li>
+</ul>
+</div>
+
+<div class="card">
+<h1>Pino D23</h1> <br> <br>
+<p>Utilizado como fim de curso de retorno. Detecta quando a garra atinge a posição inicial,
+    garantindo que o sistema saiba quando o movimento de volta foi concluído.</p>
+</div>
+<div class="card">
+<h1>Pino D22</h1> <br> <br>
+<p>Responsável pelo fim de curso de avanço. Indica quando a garra chegou ao ponto final do movimento,
+    permitindo o controle preciso da sequência de operação.</p>
+</div>
+<div class="card">
+<h1>Pino D21</h1> <br> <br>
+<p>Controla o movimento vertical da garra (subida e descida), acionando o atuador pneumático
+    responsável por essa movimentação.</p>
+</div>
+<div class="card">
+<h1>Pino D19</h1> <br> <br>
+<p> Responsável pelo acionamento da pinça, permitindo abrir e fechar a garra para capturar
+    ou soltar as peças durante o processo.</p>
+</div>
+<div class="card">
+<h1>Pino VP</h1> <br> <br>
+<p>Utilizado para leitura do sensor da esteira, detectando a presença de peças e iniciando
+    o ciclo automático do sistema.
+</p>
+</div>
+<div class="card"> 
+<h1>Pino D26</h1> <br> <br>
+<p> Conectado ao sensor da garra, responsável por identificar características da peça,
+    como se é reflexiva ou não, auxiliando na sua classificação.</p>
+</div>
+
+</main>
+
+<footer style="margin-top: 59px;">
+<p>Projeto SENAI</p>
+</footer>
+
+</body>
+</html>

@@ -6,12 +6,26 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* BODY */
-body {
+html, body {
     background: #eef2f7;
+    height: 100%;
 }
 
-/* HEADER */
+body{
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+main{
+    flex: 1;
+}
+
 header {
     background: #1f2937;
     color: white;
@@ -34,7 +48,6 @@ nav a:hover {
 }
 
 
-/* HERO */
 .hero {
     background: linear-gradient(135deg, #2563eb, #1e40af);
     color: white;
@@ -42,7 +55,6 @@ nav a:hover {
     padding: 60px 20px;
 }
 
-/* CONTAINER PADRÃO */
 .container {
     display: flex;
     justify-content: center;
@@ -51,17 +63,16 @@ nav a:hover {
     flex-wrap: wrap;
 }
 
-/* CARD PADRÃO (conteúdo geral) */
 .card {
     background: white;
     padding: 25px;
     border-radius: 12px;
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     text-align: center;
 }
 
-/* LISTA */
 .lista {
     text-align: left;
     margin-top: 15px;
@@ -71,14 +82,12 @@ nav a:hover {
     margin-bottom: 8px;
 }
 
-/* IMAGENS GERAIS */
 .imagem {
     width: 100%;
     margin-top: 20px;
     border-radius: 10px;
 }
 
-/* GALERIA */
 .galeria {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -88,7 +97,6 @@ nav a:hover {
     margin: auto;
 }
 
-/* CARD DA GALERIA (separado pra não conflitar) */
 .galeria .card {
     padding: 0;
     overflow: hidden;
@@ -111,19 +119,18 @@ nav a:hover {
 }
 
 #logo{
-    width: 30%;
-    height: 30%;
+    width: 120px;
+    height: auto;
 }
 
 #textobase{
-    margin-left: 55px;
+    margin-left: 320px;
 }
 
 ul{
     list-style: none;
 }
 
-/* FOOTER */
 footer {
     background: #1f2937;
     color: white;
@@ -135,4 +142,51 @@ footer {
    width: 250px;
    border: solid 5px rgb(133, 133, 133);
    border-radius: 30px;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    #textobase {
+        margin-left: 0;
+    }
+
+    #logo {
+        width: 120px;
+        height: auto;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .card {
+        padding: 20px;
+    }
 }
